@@ -8,7 +8,7 @@ v2 = [3,-2]
 # 3 dimensional vector 
 # will use this 3d-v in creating a 3dimensional vector 
 # v3 has a dimensionality of 3 -> size of 3  || length of 3
-# v3[0] -> v3[x] , v3[1] -> v3[y]
+# v3[0] -> v3[x] , v3[1] -> v3[y],  v3[2] -> v3[3] ( 3rd dimension )
 v3 = [ 4, -3, 2] 
 
 # to tranform a row-vector to column-vector ( or vice-versa ) -> transpose
