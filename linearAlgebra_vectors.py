@@ -34,5 +34,11 @@ plt.show()
 fig = plt.figure(figsize=plt.figaspect(1))
 ax  = fig.gca(projection='3d')
 
-# start at origin ( 0 ), then...
-ax.plot([0, v3[0]], [0, v3[1]])
+# start at origin ( 0 ), then... for all 3 points
+ax.plot([0, v3[0]], [0, v3[1]], [0, v3[2]], linewidth=3)
+
+# make the plot look nicer 
+ax.plot([0, 0], [0, 0], [-4, 4], 'k--')
+ax.plot([0, 0], [-4, 4], [0, 0], 'k--')
+ax.plot([-4, 4], [0, 0], [0, 0], 'k--')
+plt.show()
