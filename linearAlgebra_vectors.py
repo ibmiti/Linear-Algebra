@@ -78,3 +78,23 @@ plt.axis('square')
 plt.axis((-6, 6, -6, 6))
 plt.grid()
 plt.show()
+
+
+#  vector-scalar multiplcation ( aV )
+#    multiplying a vector by a scalar ( a * v ) changes the length of the vector but does not change the direction of the vector 
+
+# np will treat the array/list as a v ( vector )
+v1 = np.array([3, -1])
+l  = -.3
+vlm = v1*l # scalar-modulated -> the scalar will effect the vectors length 
+
+# plot them 
+plt.plot([0, v1[0]], [0, v1[1]], 'b', label='v_1')
+plt.plot([0, vlm[0]], [0, vlm[1]], 'r:', label='\label v_1')
+
+plt.axis('square')
+axlim = max([abs(max(v1)), abs(max(vlm))]) * 1.5 # dynamic axis lim
+plt.axis(( -axlim, axlim, -axlim, axlim ))
+plt.grid()
+plt.show()
+
