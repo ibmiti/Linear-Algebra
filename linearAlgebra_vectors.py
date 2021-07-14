@@ -98,3 +98,33 @@ plt.axis(( -axlim, axlim, -axlim, axlim ))
 plt.grid()
 plt.show()
 
+# vector-vector multiplication ( vv ) : the dot product
+#   rule : both vectors/arrays/list must be of same length in order to carry out a successful dot-product ( vv ) operation. 
+#   reason : [ 1, 2, 3, 4 ] * [ 2, 4, 5, null ] -> we cannot multiply an integer ( number ) by null / nothing
+
+# here are the ways to compute the dot product betwixt v's 
+
+# setting up the v's 
+v1 = np.array([ 1, 2, 4, 5, 6, 7 ]) # length 6
+v2 = np.array([ 0, -4, -3, 6, 5, 5 ]) # length 6 } must be same length - remember
+
+# method 1 of computing dot-product ( vv )
+dp1 = sum( np.multiply( v1, v2 ))
+
+# method 2 ...
+#  recommended way : it is the easiest way.
+dp2 = np.dot( v1, 2 )
+
+# method 3 // matrix multiplication
+dp3 = np.matmul( v1, v2)
+
+# method 4 // using loop
+dp3 = 0 # initialize 
+
+# loop over elements 
+for i in range( 0 , len( v1 )):
+
+    # multiply corresponding element and sum
+    dp4 = dp4 + v1[i] * v2[i]
+
+print(dp1, dp2, dp3, dp4)
