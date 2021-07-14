@@ -42,3 +42,32 @@ ax.plot([0, 0], [0, 0], [-4, 4], 'k--')
 ax.plot([0, 0], [-4, 4], [0, 0], 'k--')
 ax.plot([-4, 4], [0, 0], [0, 0], 'k--')
 plt.show()
+
+# ewa_linearAlg -> element wise addiition using Linear Algebra 
+# the below will not work within python, it would simply 
+# concat the two vectors/list together making it a longer 
+# vector/list
+
+# [ 1, 2, 3 ] +  [ 3 ,4, 5 ] --> [ 1, 2, 3, 3 ,4, 5 ]
+
+# ewa_python -> element wise addition using python
+
+l1 = [ 1, 2, 3 ]
+l2 = [ 3 ,4, 5 ]
+[sum(x) for x in zip(l1,l2)]
+# // [4,6,8] <-- results 
+
+# ewa_python using numpy
+# this way depends on the importing of a few modules
+#   but it simplifys the implementation / syntax 
+
+# two vectors in R2
+v1 = np.array([3,-1])
+v2 = np.array([2,4])
+v3 = v1 + v2 
+
+# plot the vector elements on graph 
+# plotting the x variable but making sure the vector is in  standard position, by placing origin or tail at 0 before providing second coord/element to graph
+#   finishing off by labeling the vector
+plt.plot([0, v1[0],[0,v1]],'b', label='v1')
+plt.plot()
