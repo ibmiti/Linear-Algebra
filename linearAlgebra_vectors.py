@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # 2 dimensional vector 
-v2 = [3,-2]
+v2 = [3, -2]
 
 # 3 dimensional vector 
 # will use this 3d-v in creating a 3dimensional vector 
@@ -69,5 +69,12 @@ v3 = v1 + v2
 # plot the vector elements on graph 
 # plotting the x variable but making sure the vector is in  standard position, by placing origin or tail at 0 before providing second coord/element to graph
 #   finishing off by labeling the vector
-plt.plot([0, v1[0],[0,v1]],'b', label='v1')
-plt.plot()
+plt.plot( [0, v1[0], [0,v1]], 'b', label='v1' )
+plt.plot( [0, v2[0]] + v1[0], [0, v2[1]] + v1[1], 'r', label='v2')
+plt.plot([0, v3[0]], [0, v3[1]], 'k', label='v1+v2')
+
+plt.legend()
+plt.axis('square')
+plt.axis((-6, 6, -6, 6))
+plt.grid()
+plt.show()
