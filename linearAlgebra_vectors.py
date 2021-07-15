@@ -128,3 +128,14 @@ for i in range( 0 , len( v1 )):
     dp4 = dp4 + v1[i] * v2[i]
 
 print(dp1, dp2, dp3, dp4)
+
+# dot product is distributive 
+
+#    quick examples of distribution 
+# 5( 6 + 2 ) = 5 * 6 + 5 * 2 = 30 + 10 = 40
+
+#  vs -> (5)(8) = 40 
+
+
+
+
