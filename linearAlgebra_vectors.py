@@ -123,9 +123,8 @@ dp3 = 0 # initialize
 
 # loop over elements 
 for i in range( 0 , len( v1 )):
-
     # multiply corresponding element and sum
-    dp4 = dp4 + v1[i] * v2[i]
+    dp4 = dp3 + v1[i] * v2[i]
 
 print(dp1, dp2, dp3, dp4)
 
@@ -135,6 +134,49 @@ print(dp1, dp2, dp3, dp4)
 # 5( 6 + 2 ) = 5 * 6 + 5 * 2 = 30 + 10 = 40
 
 #  vs -> (5)(8) = 40 
+
+## Distributive property 
+
+# create random vectors 
+# each vector will be equal length ( same-dimensionality )
+#  they will have a length of 10 ( n = 10 )
+n = 10
+a = np.random.randn(n)
+b = np.random.randn(n)
+c = np.random.randn(n)
+
+# the two results // { res1, res2 } -> should give same result
+res1 = np.dot( a, ( b + c )) # res1 == res2
+res2 = np.dot( a, b ) + np.dot( a, c ) # res2 == res1 
+
+# compare them
+print([ res1, res2 ])
+
+## Associative property 
+
+# create random vectors 
+n = 5
+a = np.random.randn(n)
+b = np.random.randn(n)
+c = np.random.randn(n)
+
+# the two results 
+res1 = np.dot( a, np.dot( b, c ))
+res2 = np.dot( np.dot( a, b ) , c ) 
+
+# compare them
+# the product ( or result ) will widely vary and never be identical -> thus associative property on dot product of vectors is illegal
+print(res1)
+print(res2)
+
+## Special cases where associate property works! 
+# 1 ) one vector is the zeros vector
+# 2 ) a==b==c -> if all vectors elements are same val.
+
+
+
+
+
 
 
 
