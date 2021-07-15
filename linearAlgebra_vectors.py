@@ -170,8 +170,30 @@ print(res1)
 print(res2)
 
 ## Special cases where associate property works! 
-# 1 ) one vector is the zeros vector
+# 1 ) one vector is the zeros vector ex : [ 0, 0, 0 ] 
+# ( a * b ) + c = b ( a * c ) is true, if a is [0,0,0]
 # 2 ) a==b==c -> if all vectors elements are same val.
+
+## create 2 4x6 matrices of random numbers.
+# Use a for-loop to compute dot products between corresponding columns 
+
+A = np.random.randn( 4, 6 ) 
+B = np.random.randn( 4, 6 )
+
+print(A)
+print(' ')
+print(B)
+
+dps = np.zeros( 6 ) 
+for i in range( 6 ):
+    dps[i] = np.dot( A[:,i], B[:,i] )
+
+print(' ')
+print(dps)
+
+
+
+
 
 
 
