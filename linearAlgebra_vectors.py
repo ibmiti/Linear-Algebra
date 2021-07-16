@@ -222,9 +222,6 @@ vl1 = np.sqrt( sum( np.multiply( v1, v1 )))
 # take the norm, which is another way to get the length 
 vl2 = np.linalg.norm( v1 )
 
-# method-2 of getting length of v
-# vl3 = np.sqrt( sum ( np.dot( v1, v1 )))
-
 print( vl1, vl2 )
 
 
