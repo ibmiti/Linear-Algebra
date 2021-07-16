@@ -211,7 +211,21 @@ v = [ 2, 4 ]
 w = [ 3, 5 ]
 print( np.dot(v,w), np.dot(w, v) )
 
+## Compute the length, or magnitude of a vector 
 
+# a vector
+v1 = np.array([ 1, 2, 3, 4, 5, 6, ])
+
+# get the length of the vector ( v )
+vl1 = np.sqrt( sum( np.multiply( v1, v1 )))
+
+# method-2 of getting length of v
+vl1_1 = np.sqrt( sum ( np.dot( v1, v2 )))
+
+# take the norm 
+vl2 = np.linalg.norm( v1 )
+
+print( vl1, vl2 )
 
 
 
