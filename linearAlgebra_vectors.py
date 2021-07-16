@@ -207,9 +207,10 @@ print(dp_ab, dp_ba, dp_ab-dp_ba)
 print(' ')
 
 # generating two 2-element integer row vectors
+v = [ 2, 4 ]
+w = [ 3, 5 ]
+print( np.dot(v,w), np.dot(w, v) )
 
-a1 = np.array([1, 2])
-b1 = np.array([2, 4])
 
 
 
