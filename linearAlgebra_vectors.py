@@ -222,9 +222,26 @@ vl1 = np.sqrt( sum( np.multiply( v1, v1 )))
 # take the norm, which is another way to get the length 
 vl2 = np.linalg.norm( v1 )
 
-print( vl1, vl2 )
+print( vl1, vl2 )   
 
+## The dot product from a geometric perspective 
 
+# two vectors 
+v1 = np.array([ 2, 4, -3])
+v2 = np.array([ 0, -3, -3])
+
+# compute the angle ( radians ) between two vectors
+ang = np.arccos( np.dot(v1,v2)) / ( np.linalg.norm(v1)*np.linalg.norm(v2))
+
+# draw them -> can plug the below within jupyter nb...
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+ax.plot([ 0, v1[0]], [0, v1[1]], [0, v1[2]], 'b')
+ax.plot([ 0, v2[0]], [0, v2[1]], [0, v2[2]], 'r')
+
+plt.axis(( -6, 6, -6, 6))
+plt.title('Angle between vectors: %s rad.' %ang)
+plt.show()
 
 
 
