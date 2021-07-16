@@ -191,6 +191,27 @@ for i in range( 6 ):
 print(' ')
 print(dps)
 
+## Is the dot product commutative?
+
+# matrix multiplication is not commutative
+
+# generating two 100-element random row vectors
+a = np.random.randn(100)
+b = np.random.randn(100)
+
+# compute a'b and b'a, test for equality
+# commutative property is the moving around of terms
+dp_ab = np.dot(a,b)
+dp_ba = np.dot(b,a)
+print(dp_ab, dp_ba, dp_ab-dp_ba)
+print(' ')
+
+# generating two 2-element integer row vectors
+
+a1 = np.array([1, 2])
+b1 = np.array([2, 4])
+
+
 
 
 
