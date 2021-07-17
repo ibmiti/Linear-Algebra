@@ -257,8 +257,10 @@ s2 = 3
 
 # compute the dot product between vectors 
 dp_ab = np.dot( vector_a, vector_b )
+print('Original dot product: ' + str(np.dot( vector_a, vector_b )))
 
 # compute the dot product between scaled vectors 
+print('Scaled dot product: ' + str(np.dot( s1*vector_a, s2*vector_b )))
 
  
 
