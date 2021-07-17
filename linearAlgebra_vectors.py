@@ -283,9 +283,26 @@ vb = np.array([ 2, 4, 6 ])
 vc = np.dot( va, vb )
 print(vc) # 38 (va)(vb) => scalar value
 
+## The outer product
 
+#  outer product !== dot product
+#   outer product becomes a matrix
+#   while dot product becomes a singular val
+#   to perform a dot product operation, both vectors must be of same length, while with a outer product operation you can have varying lengths of vectors
+ 
+v1 = np.array([ 1, 2 , 3 ])
+v2 = np.array([ -1, 0, 1 ])
 
+# outer product
+op1 = np.outer( v1, v2 )
 
+# method 2
+op2 = np.zeros(( len(v1), len(v1) ))
+for i in range( 0, len(v1) ):
+    for j in range( 0, len(v2) ):
+        op2[i, j] = v1[i] * v2[j]
+
+print(op2)
 
 
 
