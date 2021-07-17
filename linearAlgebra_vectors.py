@@ -243,7 +243,7 @@ plt.axis(( -6, 6, -6, 6))
 plt.title('Angle between vectors: %s rad.' %ang)
 plt.show()
 
-## test whether the dot product sign is invariant to scalar multiplication
+## test whether the dot product sign is invariant/orthogonal to scalar multiplication
 
 # generate two vectors (R3)
 #  R3 -> vector of size/cardinality/magnitude/length of 3 
@@ -262,7 +262,28 @@ print('Original dot product: ' + str(np.dot( vector_a, vector_b )))
 # compute the dot product between scaled vectors 
 print('Scaled dot product: ' + str(np.dot( s1*vector_a, s2*vector_b )))
 
- 
+## Hadamar vector multiplication
+
+#  rule : both vectors must be of same length
+
+#  create vectors 
+v_a = np.array([ 1, 0, 3, 5, -2 ])
+v_b = np.array([ 1, 4, 6, 7, 3 ])
+
+# perform element wise multiplication ( hadamar v-mult )
+v_c = np.multiply( v_a, v_b )
+print(v_c) # becomes [ 1  0 18 35 -6]
+
+# Hadawar v-multiplication results in a new v
+# dot product multiplication results in a scalar value ( singular value )
+
+# example of dot product multiplication 
+va = np.array([ 1, 3, 4 ])
+vb = np.array([ 2, 4, 6 ])
+vc = np.dot( va, vb )
+print(vc) # 38 (va)(vb) => scalar value
+
+
 
 
 
