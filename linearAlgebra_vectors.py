@@ -297,12 +297,46 @@ v2 = np.array([ -1, 0, 1 ])
 op1 = np.outer( v1, v2 )
 
 # method 2
+# zero'ing out the arr to zeros, this acts as a starting point for our loop
 op2 = np.zeros(( len(v1), len(v1) ))
 for i in range( 0, len(v1) ):
     for j in range( 0, len(v2) ):
         op2[i, j] = v1[i] * v2[j]
 
 print(op2)
+
+## Vector cross-product 
+
+# rule-1 : vectors involved have a minimal cardinality or size/length ( v.length === 3 )
+#  of 3, and it only can be ran on 2 vectors max
+
+# legal : v[a,b,c] * v2[a,b,c]
+# illegal : v[a,b,c,d] * v[a,b,c,d] ( over element limit by 1 each)
+# illegal : v*v*v ( over v limit by 1) 
+
+# resolves to : another 3 dimensional v 
+
+# create vectors
+v1 = [ -3, 2, 5 ]
+v2 = [ 4, -3, 0 ]
+
+# Pythons cross-product function
+v3a = np.cross( v1, v2 )
+
+#  "manual" method 
+v3b = [
+     [ v1[1]*v2[2] - v1[2]*v2[1] ],
+     [ v1[2]*v2[0] - v1[0]*v2[2] ],
+     [ v1[0]*v2[1] - v1[1]*v2[0] ]
+]
+
+print( v3a, v3b )
+
+
+      
+
+
+
 
 
 
