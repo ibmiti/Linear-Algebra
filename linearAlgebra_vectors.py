@@ -332,6 +332,28 @@ v3b = [
 
 print( v3a, v3b )
 
+## vectors with complex-numbers 
+
+# Hermitian transpose ( conjugate transpose )
+
+# create a complex number 
+z = np.complex( 3, 4 )
+
+# magnitude
+print( np.linalg.norm(z) )
+ 
+#  by transpose
+print( np.transpose(z)*z )
+
+#  by hermitian transpose
+print( np.transpose(z.conjugate())*z )
+
+# complex vector 
+v = np.array( [ 3, 4, 4j, 5+2j, np.complex(2, -5) ])
+print( v.T )
+print( np.transpose(v) )
+print( np.transpose(v.conjugate() ))
+
 
       
 
