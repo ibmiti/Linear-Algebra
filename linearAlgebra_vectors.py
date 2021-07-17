@@ -243,7 +243,24 @@ plt.axis(( -6, 6, -6, 6))
 plt.title('Angle between vectors: %s rad.' %ang)
 plt.show()
 
+## test whether the dot product sign is invariant to scalar multiplication
 
+# generate two vectors (R3)
+#  R3 -> vector of size/cardinality/magnitude/length of 3 
+
+vector_a = np.array([ 2, 3, 4 ])
+vector_b = np.array([ -3, 4, 5 ])
+
+# generate two scalars 
+s1 = 2
+s2 = 3
+
+# compute the dot product between vectors 
+dp_ab = np.dot( vector_a, vector_b )
+
+# compute the dot product between scaled vectors 
+
+ 
 
 
 
