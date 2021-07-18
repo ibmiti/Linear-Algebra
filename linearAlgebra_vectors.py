@@ -354,6 +354,18 @@ print( v.T )
 print( np.transpose(v) )
 print( np.transpose(v.conjugate() ))
 
+## unit vector : formal definition
+
+# uv s.t. ||uv|| = 1 
+#  a vector unit is equal to 1
+
+# if u3 = 1, u = 1/3
+
+# u is worth the a single value within a v
+v = np.array([ 0, 2 ])
+u = len(v[:1])
+print(u)
+
 
 
       
