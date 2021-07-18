@@ -357,14 +357,41 @@ print( np.transpose(v.conjugate() ))
 ## unit vector : formal definition
 
 # uv s.t. ||uv|| = 1 
-#  a vector unit is equal to 1
 
-# if u3 = 1, u = 1/3
+# vector 
+v1 = np.array([ -3, 6 ])
 
-# u is worth the a single value within a v
-v = np.array([ 0, 2 ])
-u = len(v[:1])
-print(u)
+# mu
+mu = 1/np.linalg.norm(v1)
+
+vln = v1*mu
+
+print(vln)
+
+# create two random-integer vectors R(4) length of 4 / magnitude of 4
+n = 4
+v1 = np.round( 20*np.random.randn(4) )
+v1 = np.round( 20*np.random.randn(4) )
+
+#  compute lengths of the individual vectors,
+#  and the magnitude of their dot product
+v1m = np.sqrt(np.dot( v1, v1 ))
+v2m = np.sqrt(np.dot( v2, v2 ))
+dpm = np.abs( np.dot( v1, v2 ))
+print( v1m, v2m, dpm )
+print(' ')
+
+# "normalize" the vectors
+v1u = v1/v1m
+v2u = v2/v2m
+print(v1u, v2u)
+print(' ')
+
+#  compute magnitude of that dot product
+dpm = np.abs(np.dot(v1u, v2u))
+
+
+
 
 
 
