@@ -399,6 +399,12 @@ s2 = np.array([ 1, 7, 0 ])
 v = np.array([ 1, 2, 0 ])
 w = np.array([ 3, 2, 1 ])
 
+# Standard basis vectors 
+
+# R2 -> { [ 0, 1 ], [ 0, 1 ] } ( set of independent vectors )
+ 
+# R3 -> { [ 1,0,0 ], [ 0,1,0 ], [ 0,0,1 ] }
+ 
 
 
 
