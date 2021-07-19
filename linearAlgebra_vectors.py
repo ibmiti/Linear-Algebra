@@ -390,6 +390,14 @@ print(' ')
 #  compute magnitude of that dot product
 dpm = np.abs(np.dot(v1u, v2u))
 
+## Set
+
+s1 = np.array([ 1, 1, 0 ])
+s2 = np.array([ 1, 7, 0 ])
+
+# vectors v and w
+v = np.array([ 1, 2, 0 ])
+w = np.array([ 3, 2, 1 ])
 
 
 
